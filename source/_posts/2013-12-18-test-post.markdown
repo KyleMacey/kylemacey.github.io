@@ -1,0 +1,21 @@
+---
+layout: post
+title: "Test Post"
+date: 2013-12-18 18:09:34 -0500
+comments: true
+categories:
+---
+
+== Wow!
+
+My very first test post ever!
+
+```
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, odit, suscipit maiores repellendus libero delectus illo omnis nam excepturi nobis reprehenderit laboriosam tempora eius animi iste! Adipisci culpa saepe magnam.
+```
+
+```ruby
+p = Person.new name: "Bob", state: :active
+p.save!
+# it saves!
+```
