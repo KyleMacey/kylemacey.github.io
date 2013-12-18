@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://KyleMacey.github.io/sitemap.xml 
+Sitemap: http://kylemacey.github.io/sitemap.xml 
