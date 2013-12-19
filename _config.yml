@@ -98,3 +98,6 @@ google_analytics_tracking_id:
 
 # Facebook Like
 facebook_like: true
+
+# Gravatar
+gravatar_email: shout@kylemacey.com
