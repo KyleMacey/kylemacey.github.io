@@ -4,7 +4,7 @@
   <title><![CDATA[Kyle Macey]]></title>
   <link href="http://kylemacey.github.io/atom.xml" rel="self"/>
   <link href="http://kylemacey.github.io/"/>
-  <updated>2013-12-18T18:11:21-05:00</updated>
+  <updated>2013-12-19T09:29:44-05:00</updated>
   <id>http://kylemacey.github.io/</id>
   <author>
     <name><![CDATA[Kyle Macey]]></name>
@@ -12,31 +12,5 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[Test Post]]></title>
-    <link href="http://kylemacey.github.io/blog/2013/12/18/test-post/"/>
-    <updated>2013-12-18T18:09:34-05:00</updated>
-    <id>http://kylemacey.github.io/blog/2013/12/18/test-post</id>
-    <content type="html"><![CDATA[<p>== Wow!</p>
-
-<p>My very first test post ever!</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, odit, suscipit maiores repellendus libero delectus illo omnis nam excepturi nobis reprehenderit laboriosam tempora eius animi iste! Adipisci culpa saepe magnam.</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">p</span> <span class="o">=</span> <span class="no">Person</span><span class="o">.</span><span class="n">new</span> <span class="nb">name</span><span class="p">:</span> <span class="s2">&quot;Bob&quot;</span><span class="p">,</span> <span class="ss">state</span><span class="p">:</span> <span class="ss">:active</span>
-</span><span class='line'><span class="nb">p</span><span class="o">.</span><span class="n">save!</span>
-</span><span class='line'><span class="c1"># it saves!</span>
-</span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
   
 </feed>
