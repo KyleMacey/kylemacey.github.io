@@ -21,7 +21,7 @@ GitHub really shares a lot of the values that I hold. I believe in fostering goo
 
 ### I see here on your resumé that you're currently a manager, are you looking for a management position?
 
-Not necessarily, though I wouldn't be opposed to it. I've found management to introduce a lot of distractions that allow me to focus on my passions. I've recently decided that I want to be the best developer I can be, and I'm going to base my future career decisions based on that goal.
+Not necessarily, though I wouldn't be opposed to it. I've found management to introduce a lot of distractions that don't allow me to focus on my passions. I've recently decided that I want to be the best developer I can be, and I'm going to base my future career decisions based on that goal.
 
 ### What would you see yourself doing at GitHub?
 
