@@ -4,13 +4,52 @@
   <title><![CDATA[Kyle Macey]]></title>
   <link href="http://kylemacey.github.io/atom.xml" rel="self"/>
   <link href="http://kylemacey.github.io/"/>
-  <updated>2015-02-05T21:08:02-05:00</updated>
+  <updated>2015-02-05T21:12:53-05:00</updated>
   <id>http://kylemacey.github.io/</id>
   <author>
     <name><![CDATA[Kyle Macey]]></name>
-
+    
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Why You Should be Learning Ruby Right Now]]></title>
+    <link href="http://kylemacey.github.io/blog/2013/12/19/why-you-should-be-learning-ruby-right-now/"/>
+    <updated>2013-12-19T22:11:34-05:00</updated>
+    <id>http://kylemacey.github.io/blog/2013/12/19/why-you-should-be-learning-ruby-right-now</id>
+    <content type="html"><![CDATA[<p>I often get asked about what I do by the people I know. It&rsquo;s hard to describe my average workday without using words like &ldquo;awesome&rdquo;, &ldquo;gnarley&rdquo;, or &ldquo;fun&rdquo;. Frankly, I love what I do, and I love working with the people I do. Now, I know that programming isn&rsquo;t necessarily for everyone, but I believe that many people write it off that would not only find programming enjoyable, but might also be pretty awesome.</p>
 
+<p>So what do I do? I&rsquo;m a Ruby developer! I make awesome websites and applications to make people&rsquo;s lives better! What&rsquo;s Ruby, you ask?</p>
+
+<blockquote><p>Ruby is a dynamic, reflective, object-oriented, general-purpose programming language. It was designed and developed in the mid-1990s by Yukihiro &ldquo;Matz&rdquo; Matsumoto in Japan.</p>
+
+<p>-Wikipedia</p></blockquote>
+
+<p>In short, Ruby is a programming language that&rsquo;s flexible, relatable to real-world analogies, and, most of all, fun to learn!</p>
+
+<p>After having tried to persuade many before, I&rsquo;ve decided to compile all my best reasoning for learning to code into a nice, easy to read list. If you&rsquo;re not a developer already, look through it and consider learning. If you are a coder, then maybe there will be some points here to grow your local Ruby community. Or maybe you haven&rsquo;t learned Ruby yet, and are looking for reasons to learn a new language.</p>
+
+<h2>1. Ruby is easy to learn</h2>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, eaque culpa libero aliquid reiciendis et officia. Eligendi, ducimus dolorem odio aperiam vero fugit inventore possimus at ullam magni sed repudiandae.</p>
+
+<h2>2. Programming is an excellent life skill</h2>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, ab, tempore libero quos placeat quaerat ea ducimus laborum nihil ratione voluptatibus fuga consequatur dolorem non cum excepturi suscipit temporibus possimus.</p>
+
+<h2>3. Other Rubyists want you to be learning Ruby</h2>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, esse porro veniam nobis cumque voluptatem vero enim odio earum sed sequi itaque incidunt velit tempore officiis veritatis non eos distinctio.</p>
+
+<h2>4. It&rsquo;s not only for a &ldquo;certain kind&rdquo; of person</h2>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, commodi, aliquam eligendi vitae quos inventore excepturi ea repellat eaque magnam nobis totam non delectus voluptas ut expedita nulla. Suscipit, nesciunt.</p>
+
+<h2>5. You can start right now</h2>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, sapiente nisi odio vitae molestias sed perspiciatis provident mollitia molestiae officiis beatae iure consequatur enim sit quidem eveniet omnis accusantium tempore.</p>
+]]></content>
+  </entry>
+  
 </feed>
