@@ -6,7 +6,18 @@ var github = (function(){
     var i = 0, fragment = '', t = $(target)[0];
 
     for(i = 0; i < repos.length; i++) {
-      fragment += '<li><a href="'+repos[i].html_url+'">'+repos[i].name+'</a><p>'+escapeHtml(repos[i].description||'')+'</p></li>';
+      fragment += '\
+      <li> \
+        <a href="' + repos[i].html_url + '">' +
+          repos[i].name + ' \
+        </a> \
+        <div class="language">' +
+          repos[i].language + ' \
+        </div> \
+        <p>' +
+          escapeHtml(repos[i].description||'') + ' \
+        </p> \
+      </li>';
     }
     t.innerHTML = fragment;
   }

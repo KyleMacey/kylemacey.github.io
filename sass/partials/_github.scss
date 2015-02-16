@@ -1,0 +1,26 @@
+#gh_repos {
+  list-style-type: none;
+  margin-left: 0px;
+
+  li {
+    border-bottom: solid 1px #CCC;
+    margin-bottom: 8px;
+    
+    &:last-child {
+      border-bottom: none;
+    }
+
+    a {
+      color: #4183c4;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+
+    .language {
+      float: right;
+      color: #AAA;
+      font-size: 0.8em;
+      font-weight: bold;
+    }
+  }
+}
