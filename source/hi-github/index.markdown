@@ -35,8 +35,6 @@ I'm trying to get rolling on my new pet project, [iodi](https://github.com/KyleM
 
 Sure!
 
-[TestEase:](https://github.com/KyleMacey/test_ease) A simple ruby gem that disables MD5 hashing for passwords in ActiveModel when running tests.
-
 [spree_google_shopping:](https://github.com/salzmanGroup/spree-google-shopping) A [Spree Commerce](https://github.com/spree/spree) extension that supports exporting products from Spree into Google's Content for Shopping API. This started as a project for my job, so it's a bit concise at the moment. I plan to open it up soon and support more versions of Spree.
 
 [Staas.io (Stack-as-a-Service):](http://staas.io) My project from Startup Weekend this past year. A marketplace for software stacks. Was intended to support one-click deployments using chef and consolidated account management for external services (hosting, version control, SaaS, etc.)
