@@ -4,7 +4,6 @@ title: "Is Crafturbation a Dirty Word?"
 date: 2015-02-14 09:41:40 -0500
 comments: true
 published: false
-categories:
 ---
 
 Recently, I was having a conversation at the bar with [Chris](https://twitter.com/chorn) about trends in software development. I had pointed out that there is a  strong push toward perfectionism not only in code, but in the process of actually developing a product. It seemed to me that developers care just as much now about their working environment, project management, and employment philosophies as they do the score they receive on Code Climate.
