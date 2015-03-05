@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Oh, Ship! - Kyle Macey</title>
+  <meta name="author" content="Kyle Macey">
+
+  
+  <meta name="description" content="Don&rsquo;t forget to back up your SSH keys. That&rsquo;s what I learned this week. After having some OS issues on my laptop, I backed up my home &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://kylemacey.github.io/blog/2015/03/04/oh">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Kyle Macey" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <script src="/javascripts/custom.js" type="text/javascript"></script>
+  <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans|Roboto:400,300' rel='stylesheet' type='text/css'>
+
+  
+
+</head>
+
+
+<body>
+	<div class="container">
+		<aside class="left">
+			<div class="inner-left">
+				<header>
+					<img src="http://www.gravatar.com/avatar/e7bc3ce1dbb0fcaa9bb00bf10628526e?s=200" alt="Gravatar of Kyle Macey " title="Gravatar of Kyle Macey" class="profilepic" />
+<hgroup>
+  <h1><a href="/">Kyle Macey</a></h1>
+  
+    <h2 class="subtitle">A lean, mean coding machine</h2>
+   
+</hgroup>
+
+
+				</header>
+				<footer>
+					<p>
+	
+		<a href="http://github.com/KyleMacey" class="btn btn-dark">GitHub</a>
+	
+	
+		<a href="http://twitter.com/itskylemacey" class="btn btn-dark">Twitter</a>
+	
+</p>
+				</footer>
+			</div>
+		</aside>
+    	<section class="right">
+    		<div class="inner-right">
+    			<div id="posts">
+    			  	<article class="post">
+    
+  <header>
+    
+      <h1 class="entry-title">Oh, Ship!</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-03-04T17:32:20-05:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h3>Don&rsquo;t forget to back up your SSH keys.</h3>
+
+<p>That&rsquo;s what I learned this week. After having some OS issues on my laptop, I backed up my home folder and installed Fedora on my machine where Ubuntu once stood. I tried to be clever and only back up certain directories, figuring I didn&rsquo;t need the rest. It turns out that I completely skipped past backing up <code>~/.ssh</code>.</p>
+
+<p>What&rsquo;s the worst that can happen? In most instances, you can upload new public keys to work with fresh ssh credentials. That&rsquo;s exactly what I did for GitHub, Bitbucket, and everything else I could think of. However, this left my Jenkins server, which was running on an EC2 instance, completely inaccessible, since one does not simply generate a new keypair for an EC2 instance. This wouldn&rsquo;t be the worst news in the world if it weren&rsquo;t for the fact that just today, the instance ran out of disk space. Artifacts from past builds piled up and brought poor Jenkins to a halt. I tried my damndest to install plugins to clean the workspaces, but it was too late. Jenkins was dead.</p>
+
+<p>What were my options? I could try to clone the EC2 instance and generate a new keypair. I could build a new instance from scratch and try to copy configuration. I could go back in time and convince myself that it&rsquo;s a good idea to regularly back up your CI server. All of these were possibilities. However, I wanted to take advantage of my misfortune and make something good from it.</p>
+
+<h3>All is not lost</h3>
+
+<p>I had recently heard an advertisement for <a href="https://codeship.com/">Codeship</a>. Although I know there are plenty of hosted build server solutions out there, Codeship was fresh in my mind. I paid their site a visit and was instantly drawn in by their ParallelCI feature. It allows you to split your test suite into multiple simultaneous jobs using their intuitive web interface. I had always meant to set this up with Jenkins, but had never gotten around to it.</p>
+
+<p>I started with the free tier Codeship account. I pushed a new change to GitHub and waited while my new friends ran my test suite.</p>
+
+<p>Failure. At least 20 tests. All of which depended on factors that I had custom-configured into Jenkins: custom DNS resolvers, private APIs and weird remote databases. All failing due to what I thought made my test suite special. I was actually pretty pleased by this. After a couple hours, I refactored my tests in a new branch. I rewrote them so that they would make sense to run on any machine without any special setup. By the end, I felt like I had actually improved the usefulness of my tests by making expectations that mattered, rather than ones that made me feel <em>special</em>. I pushed my branch to GitHub and waited again.</p>
+
+<p>Success! I was conveniently notified in our company Slack room that everything was going to be okay. All I had left to do was copy our custom deployment script into Codeship (though they offer deployment integrations with several services using the web interface) and I was shipping again! I even broke my tests up into two pipes and halved my testing time. All was going swimmingly.</p>
+
+<p>Codeship&rsquo;s responsive customer support was able to help me get a few more bits of our workflow operating using their interface, and Jenkins was replaced in a single day. And at $49/month, it&rsquo;s not much more expensive than paying for a medium EC2 instance.</p>
+
+<h3>The moral of the story</h3>
+
+<p>I&rsquo;ve always loved to tinker with things. I think that&rsquo;s why I was drawn toward Jenkins in the first place. The customizability and power was magnificent. However, you reach a point sometimes when work just needs to get <strong>done</strong>. I was glad to be up and operational again so quickly, and can now focus on the fun part: writing code!</p>
+</div>
+
+
+</article>
+
+
+        <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://kylemacey.github.io/blog/2015/03/04/oh/" data-via="itskylemacey" data-counturl="http://kylemacey.github.io/blog/2015/03/04/oh/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+
+
+
+<section id="comments">
+    <div id="disqus_thread"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+
+
+    			</div>
+    			<footer id="footer">
+    				<p class="credit">
+  Copyright &copy; 2015 - Kyle Macey. Powered by <a href="http://octopress.org">Octopress</a>
+</p>
+
+
+    			</footer>
+    			
+
+<script type="text/javascript">
+      var disqus_shortname = 'kylemacey';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://kylemacey.github.io/blog/2015/03/04/oh/';
+        var disqus_url = 'http://kylemacey.github.io/blog/2015/03/04/oh/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+<link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans|Roboto:400,300' rel='stylesheet' type='text/css'>
+
+
+
+
+
+    		</div>
+    	</section>
+  	</div>
+</body>
+</html>
