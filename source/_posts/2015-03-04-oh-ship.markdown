@@ -1,0 +1,31 @@
+---
+layout: post
+title: "Oh, Ship!"
+date: 2015-03-04 17:32:20 -0500
+comments: true
+categories: CI, DevOps
+---
+
+### Don't forget to back up your SSH keys.
+
+That's what I learned this week. After having some OS issues on my laptop, I backed up my home folder and installed Fedora on my machine where Ubuntu once stood. I tried to be clever and only back up certain directories, figuring I didn't need the rest. It turns out that I completely skipped past backing up `~/.ssh`. 
+
+What's the worst that can happen? In most instances, you can upload new public keys to work with fresh ssh credentials. That's exactly what I did for GitHub, Bitbucket, and everything else I could think of. However, this left my Jenkins server, which was running on an EC2 instance, completely inaccessible, since one does not simply generate a new keypair for an EC2 instance. This wouldn't be the worst news in the world if it weren't for the fact that just today, the instance ran out of disk space. Artifacts from past builds piled up and brought poor Jenkins to a halt. I tried my damndest to install plugins to clean the workspaces, but it was too late. Jenkins was dead.
+
+What were my options? I could try to clone the EC2 instance and generate a new keypair. I could build a new instance from scratch and try to copy configuration. I could go back in time and convince myself that it's a good idea to regularly back up your CI server. All of these were possibilities. However, I wanted to take advantage of my misfortune and make something good from it.
+
+### All is not lost
+
+I had recently heard an advertisement for [Codeship](https://codeship.com/). Although I know there are plenty of hosted build server solutions out there, Codeship was fresh in my mind. I paid their site a visit and was instantly drawn in by their ParallelCI feature. It allows you to split your test suite into multiple simultaneous jobs using their intuitive web interface. I had always meant to set this up with Jenkins, but had never gotten around to it.
+
+I started with the free tier Codeship account. I pushed a new change to GitHub and waited while my new friends ran my test suite. 
+
+Failure. At least 20 tests. All of which depended on factors that I had custom-configured into Jenkins: custom DNS resolvers, private APIs and weird remote databases. All failing due to what I thought made my test suite special. I was actually pretty pleased by this. After a couple hours, I refactored my tests in a new branch. I rewrote them so that they would make sense to run on any machine without any special setup. By the end, I felt like I had actually improved the usefulness of my tests by making expectations that mattered, rather than ones that made me feel *special*. I pushed my branch to GitHub and waited again.
+
+Success! I was conveniently notified in our company Slack room that everything was going to be okay. All I had left to do was copy our custom deployment script into Codeship (though they offer deployment integrations with several services using the web interface) and I was shipping again! I even broke my tests up into two pipes and halved my testing time. All was going swimmingly.
+
+Codeship's responsive customer support was able to help me get a few more bits of our workflow operating using their interface, and Jenkins was replaced in a single day. And at $49/month, it's not much more expensive than paying for a medium EC2 instance.
+
+### The moral of the story
+
+I've always loved to tinker with things. I think that's why I was drawn toward Jenkins in the first place. The customizability and power was magnificent. However, you reach a point sometimes when work just needs to get **done**. I was glad to be up and operational again so quickly, and can now focus on the fun part: writing code!
