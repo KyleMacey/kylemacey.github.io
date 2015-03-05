@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ci, | Kyle Macey]]></title>
   <link href="http://kylemacey.github.io/blog/categories/ci/atom.xml" rel="self"/>
   <link href="http://kylemacey.github.io/"/>
-  <updated>2015-03-04T21:33:10-05:00</updated>
+  <updated>2015-03-04T21:37:40-05:00</updated>
   <id>http://kylemacey.github.io/</id>
   <author>
     <name><![CDATA[Kyle Macey]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Oh, Ship!]]></title>
-    <link href="http://kylemacey.github.io/blog/2015/03/04/oh/"/>
+    <link href="http://kylemacey.github.io/blog/2015/03/04/oh-ship/"/>
     <updated>2015-03-04T17:32:20-05:00</updated>
-    <id>http://kylemacey.github.io/blog/2015/03/04/oh</id>
+    <id>http://kylemacey.github.io/blog/2015/03/04/oh-ship</id>
     <content type="html"><![CDATA[<h3>Don&rsquo;t forget to back up your SSH keys.</h3>
 
 <p>That&rsquo;s what I learned this week. After having some OS issues on my laptop, I backed up my home folder and installed Fedora on my machine where Ubuntu once stood. I tried to be clever and only back up certain directories, figuring I didn&rsquo;t need the rest. It turns out that I completely skipped past backing up <code>~/.ssh</code>.</p>
