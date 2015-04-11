@@ -17,24 +17,14 @@ I like using Ruby for most of my projects, but am also familiar with a variety o
 
 ### Why do you want to work at GitHub?
 
-GitHub really shares a lot of the values that I hold. I believe in fostering good software development practices, to always be growing, and to have fun doing what I love to do most. GitHub would face me with new and exciting challenges to always keep me learning, and hold me to a standard that would make me proud as a developer to adhere to. Also, on a more shallow note, HQ 3.0 looks pretty sexy.
-
-### I see here on your resumé that you're currently a manager, are you looking for a management position?
-
-Not necessarily, though I wouldn't be opposed to it. I've found management to introduce a lot of distractions that don't allow me to focus on my passions. I've recently decided that I want to be the best developer I can be, and I'm going to base my future career decisions based on that goal.
+GitHub really shares a lot of the values that I hold. I believe in fostering good software development practices, to always be growing, and to have fun doing what I love to do. GitHub would face me with new and exciting challenges to always keep me learning, and hold me to a standard that would make me proud as a developer to adhere to. Also, on a more shallow note, HQ 3.0 looks pretty sexy.
 
 ### What would you see yourself doing at GitHub?
 
-Well, I've [heard tell](http://www.confreaks.com/videos/3764-railsberry2013-internal-tools-make-or-break-your-team) of an Internal Tools Team at GitHub which sounds really exciting to me. I've always liked building things that I use myself, and I like having instant, honest feedback from my peers who are also users. Plus, I feel a little less conservative about what I can throw out there with internal apps. This allows me to try out new things and really break forward with new ideas.
+Well, I was introduced to the Implementations Specialist job by [Nathan Henderson](https://github.com/nathos) and was immediately intrigued. Though for a long time, I've primarily considered myself a developer, I'm not afraid to branch out into other areas. The ideas of traveling and working with customers directly again excite me, and I feel like my experience in IT and DevOps could really add a bit to the team. And since I'm a developer myself, I feel like I can have good input on what a good solution really is when implementing a product like GitHub Enterprise. 
 
-### What are you working on now?
+### What are you doing now?
 
-I'm trying to get rolling on my new pet project, [iodi](https://github.com/KyleMacey/iodi). It's essentially going to be an app that talks to multiple API's to get a story about what you've done each day. The CEO where I work likes getting an email every day telling him what I've done. I don't like doing this, thinking to myself *if he just learned all the tools I use, he would **know** what I'd done today.* I realized that was probably a tall order: asking a non-technical person to learn Pivotal Tracker, GitHub, Jenkins, etc.  So I've started working on this app which will have sort of an if-this-then-that feel to it, where users connect to different channels. Every day, the app will craft a readable, newspaper-style report with the data from the channels and send it to a configured email. I really hope it helps close that software-to-business gap that small to medium sized businesses seem to suffer from.
+As a developer, I've shifted my focus from just being a better coder to include improving myself philosophically as a contributor. There will always be new technologies, and new problems, and new companies, but I want to spend some time focusing on growing as someone that can propose appropriate, elegant solutions while working in any sort of scenario. I've started researching more about different styles of development, how to interact with product owners, and immersed myself into startup culture. Before a single line of code is written, before the first scrum meeting, before you even shake hands, you have to be someone who will make the best decisions for the product *and* the business. 
 
-### Do you have other projects we can look at?
-
-Sure!
-
-[spree_google_shopping:](https://github.com/salzmanGroup/spree-google-shopping) A [Spree Commerce](https://github.com/spree/spree) extension that supports exporting products from Spree into Google's Content for Shopping API. This started as a project for my job, so it's a bit concise at the moment. I plan to open it up soon and support more versions of Spree.
-
-[Staas.io (Stack-as-a-Service):](http://staas.io) My project from Startup Weekend this past year. A marketplace for software stacks. Was intended to support one-click deployments using chef and consolidated account management for external services (hosting, version control, SaaS, etc.)
+In my personal life, I've taken up learning bartending. It's a profession that's always fascinated me and appeals to my desire to build things that are enjoyed by other people. As a product developer, I don't often get to see the users' reactions to the things I build, and making cocktails allows the "user" to admire the craft itself as well as the product. Though I may not pursue bartending as a career, the learning process and making drinks for my friends has been wildly enjoyable. 
